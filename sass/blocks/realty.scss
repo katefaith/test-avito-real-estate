@@ -1,0 +1,18 @@
+.realty {
+    display: flex;
+    flex-direction: column;
+}
+
+.realty__title {
+    align-self: center;
+    text-align: center;
+}
+
+.realty__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

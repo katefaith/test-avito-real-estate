@@ -1,0 +1,37 @@
+.realty-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.realty-item__photo {
+    img {
+        display: block;
+    }
+}
+
+.realty-item__link {
+    text-decoration: none;
+    color: #009cf0;
+
+    &:hover {
+        color: #ff6163;
+    }
+}
+
+.realty-item__title {
+    margin: 0;
+    font-size: 14px;
+}
+
+.realty-item__descr {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 20px;
+    color: #8f8f8f;
+}
+
+.realty-item__price {
+    font-weight: 700;
+    color: #000;
+}
+

@@ -3,23 +3,25 @@ let url = 'http://134.209.138.34/items';
 fetch(url)
     .then(response => response.json() )
     .then(items => {
-        let html = '<h1>Недвижимость</h1>';
-        html += '<ul class="realty-list">';
+        let html = '<h1 class="realty__title">Список объектов недвижимости</h1>';
+        html += '<ul class="realty__list">';
         items.forEach(item => {
             html += `
-                <li>
-                    <a href="#"><img src="${item.previewImage}" width="auto" /></a>
-                    <div>
-                        <a href="#">${item.title}</a>
-                        <p>ID: ${item.id}</p>
-                        <p>Адрес: ${item.address}</p>
-                        <p>Цена: ${item.price}</p>
-                    <div>
+                <li class="realty__item  realty-item">
+                    <a href="#" class="realty-item__photo"><img src="${item.previewImage}" width="auto" /></a>
+                    <div class="realty-item__descr">
+                        <a href="#" class="realty-item__link">
+                            <h2 class="realty-item__title">${item.title}</h2>
+                        </a>
+                        <div class="realty-item__id">ID ${item.id}</div>
+                        <div class="realty-item__addr">${item.address}</div>
+                        <div class="realty-item__price">${item.price}</div>
+                    </div>
                 </li>
             `;
         });
         html += '</ul>';
 
-        document.querySelector('.main-page').innerHTML = html;
+        document.querySelector('.realty').innerHTML = html;
     })
     .catch(error => console.log(error) )

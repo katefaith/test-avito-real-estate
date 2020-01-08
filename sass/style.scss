@@ -3,9 +3,13 @@
 @import "global/fonts.scss";
 @import "variables.scss";
 
+@import "blocks/main-page.scss";
+@import "blocks/realty.scss";
+@import "blocks/realty-item.scss";
+
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-size: 14px;
-  line-height: normal;
+  line-height: 1.5;
 }
