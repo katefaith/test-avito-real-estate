@@ -3,9 +3,10 @@
 @import "global/fonts.scss";
 @import "variables.scss";
 
-@import "blocks/main-page.scss";
+@import "blocks/page-wrapper.scss";
 @import "blocks/realty.scss";
 @import "blocks/realty-item.scss";
+@import "blocks/slider.scss";
 
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
