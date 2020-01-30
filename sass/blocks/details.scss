@@ -1,3 +1,50 @@
 .details {
     @include container;
+    border: 1px solid transparent;
+}
+
+.details__title {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+
+    @media (max-width: $breakpoint-m) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.details__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    p {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    span {
+        color: #8f8f8f;
+    }
+
+    @media (max-width: $breakpoint-m) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.details__slider {
+    margin: 0 auto;
+}
+
+.details__description {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media (max-width: $breakpoint-m) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
