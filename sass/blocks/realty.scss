@@ -1,4 +1,5 @@
 .realty {
+    @include container;
     display: flex;
     flex-direction: column;
 }

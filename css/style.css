@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -309,13 +310,9 @@ template {
   font-style: normal;
   font-weight: normal;
 }*/
-.page-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px; }
-
 .realty {
+  max-width: 768px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column; }
 
@@ -334,6 +331,11 @@ template {
 .realty-item {
   display: flex;
   margin-bottom: 20px; }
+  @media (max-width: 470px) {
+    .realty-item {
+      flex-direction: column;
+      margin-left: 20px;
+      margin-right: 20px; } }
 
 .realty-item__photo img {
   display: block; }
@@ -353,10 +355,25 @@ template {
   flex-direction: column;
   padding: 0 20px 20px;
   color: #8f8f8f; }
+  @media (max-width: 470px) {
+    .realty-item__descr {
+      padding: 0;
+      margin-top: 10px; } }
 
 .realty-item__price {
   font-weight: 700;
   color: #000; }
+
+.realty-item__addr {
+  word-wrap: break-word;
+  word-break: normal;
+  /* для Opera и FireFox */
+  word-break: break-word;
+  /* для Chrome */ }
+
+.details {
+  max-width: 768px;
+  margin: 0 auto; }
 
 .slider {
   position: relative;

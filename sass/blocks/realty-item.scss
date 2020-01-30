@@ -1,6 +1,12 @@
 .realty-item {
     display: flex;
     margin-bottom: 20px;
+
+    @media (max-width: $breakpoint-s) {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 .realty-item__photo {
@@ -28,6 +34,11 @@
     flex-direction: column;
     padding: 0 20px 20px;
     color: #8f8f8f;
+
+    @media (max-width: $breakpoint-s) {
+        padding: 0;
+        margin-top: 10px;
+    }
 }
 
 .realty-item__price {
@@ -35,3 +46,8 @@
     color: #000;
 }
 
+.realty-item__addr {
+    word-wrap: break-word;
+    word-break: normal; /* для Opera и FireFox */
+    word-break: break-word; /* для Chrome */
+}
