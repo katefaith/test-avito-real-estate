@@ -23,7 +23,7 @@ function getIdFromUrl() {
 
 function renderDetails(item) {
     let detailsTemplate = document.getElementById('details-template').content;
-    document.querySelector('.details').appendChild(detailsTemplate);
+    document.querySelector('.details').append(detailsTemplate);
 
     document.querySelector('.details__title').textContent = `${item[0].title}`;
     document.querySelector('.details__address').innerHTML = `<span>Адрес:</span> ${item[0].address}`;
@@ -44,7 +44,7 @@ function renderSlides(item) {
         let img = slide.querySelector('img');
         img.setAttribute('src', image);
         img.setAttribute('alt', `image ${index + 1}`);
-        document.querySelector('.slider__container').appendChild(slide);
+        document.querySelector('.slider__container').append(slide);
     });
 }
 

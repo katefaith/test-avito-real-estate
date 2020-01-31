@@ -7,14 +7,14 @@ function loadRealEstateList() {
 
     fetch(url)
     .then(response => response.json() )
-    .then(items => {
-        let html = '<h1 class="realty__title">Список объектов недвижимости</h1>';
-        html += '<ul class="realty__list">';
-        items.forEach(item => {
+    .then(data => {
+        let realtyList = document.querySelector('.realty__list');
+        let html = '';
+        data.forEach(item => {
             let detailsUrl = `details.html?id=${item.id}`;
             html += `
                 <li class="realty__item  realty-item">
-                    <a href="details" class="realty-item__photo"><img src="${item.previewImage}" width="auto" /></a>
+                    <a href="${detailsUrl}" class="realty-item__photo"><img src="${item.previewImage}" width="auto" /></a>
                     <div class="realty-item__descr">
                         <a href="${detailsUrl}" class="realty-item__link">
                             <h2 class="realty-item__title">${item.title}</h2>
@@ -26,9 +26,7 @@ function loadRealEstateList() {
                 </li>
             `;
         });
-        html += '</ul>';
-
-        document.querySelector('.realty').innerHTML = html;
+        realtyList.innerHTML = html;
     })
     .catch(error => console.log(error) )
 }
